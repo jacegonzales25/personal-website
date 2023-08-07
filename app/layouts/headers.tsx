@@ -1,18 +1,15 @@
-import React from 'react'
+"use client"
 
+import { NavigationMenuDemo } from '@/components/navigation-bar'
+import React from 'react'
+ 
 export default function Header() {
     return (
-    <div>
-        <span>Jace.dev</span>
+    <div className="sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+        <span className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-3xl">Jace.dev</span>
 
         <div>
-            <span>Home</span>
-            <span>About</span>
-            <span>Experience</span>
-            <span>Skills</span>
-            <span>Projects</span>
-            <span>Contact Me</span>
-            
+            <NavigationMenuDemo/>
         </div>
     </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../layouts/headers';
+import Hero from './components/hero';
 
 export default function App(){
     return (
@@ -7,7 +8,7 @@ export default function App(){
             {/* Header layout */}
 
             {/* Hero */}
-
+            <Hero />
             {/* About */}
 
             {/* Experience */}
@@ -18,7 +19,6 @@ export default function App(){
 
             {/* Contact Me */}
             
-            <h1 className="text-red-500">Home</h1>
         </div>
     )
 }
