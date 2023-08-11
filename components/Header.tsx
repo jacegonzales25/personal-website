@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Header() {
     return (
-        <header className="flex items-center justify-between p-8">
-            <h1 className="text-4xl font-bold">Jace.Dev</h1>
+        <header className="flex justify-center">
+            <h1 className="scroll-m-20 text-xl font-semibold tracking-tight">Jace.Dev</h1>
         </header>
     )
 }

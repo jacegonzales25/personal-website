@@ -2,9 +2,9 @@ import './styles/globals.css'
 import type { Metadata } from 'next'
 import { Playfair_Display } from 'next/font/google'
 
-import { ThemeProvider } from "@/components/Theme-Provider"
+import { ThemeProvider } from "@/components/themes/Theme-Provider"
 
-const inter = Playfair_Display({  })
+const playFair = Playfair_Display({ subsets: ['latin'], display: 'swap' })
 
 export const metadata: Metadata = {
   title: 'Jace.Dev',
@@ -17,11 +17,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-        
-      </body>
-    </html>
+    <>
+      <html lang="en" suppressHydrationWarning className={playFair.className}>
+        <head />
+        <body>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </>
   )
 }
